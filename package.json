@@ -1,0 +1,14 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "hello",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Akshitha Pasupuleti",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.15.2"
+  }
+}
