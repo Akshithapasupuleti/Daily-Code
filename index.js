@@ -1,16 +1,22 @@
-// const fs=require('fs')
-// fs.readFile("demo.txt",'utf8',(err,data)=>{
-//     if(err){
-//         console.log(err)
-//     }
-//     console.log(data)
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./hello.css";
+import { IMG_CDN_URL } from "./Backend/utils/constants";
 
-// })
 
-const http=require("http")
-const myServer=http.createServer((request,response)=>{
-    response.write("welcome")
-    response.end()
+import Header from "./components/Header";
+import Restraurantcard from "./components/Restraurantcard";
+import Body from "./components/Body"
 
-})
-myServer.listen(5500)
+
+const AppLayout = () => (
+  <div className="app">
+    <Header />
+   
+    <Body/>
+  
+  </div>
+);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);

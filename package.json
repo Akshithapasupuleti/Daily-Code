@@ -2,13 +2,20 @@
   "name": "demo",
   "version": "1.0.0",
   "description": "hello",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": " parcel Namsthe.html",
+    "test" : "jest"
   },
   "author": "Akshitha Pasupuleti",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.15.2"
-  }
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
