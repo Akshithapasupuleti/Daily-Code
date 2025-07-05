@@ -5,6 +5,7 @@ import React, { useState,useEffect } from "react";
 import Restraurantcard from "./Restraurantcard"; 
 
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [resList,setResList]=useState([]);
@@ -26,6 +27,7 @@ const restaurants =
     json?.data?.cards?.find(
       (card) => card?.card?.card?.id === "top_brands_for_you"
     )?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    console.log(restaurants);
 
   setResList(restaurants || []); // fallback to empty array
 
@@ -68,12 +70,15 @@ if(resList.length===0){
       
     <div className="restaurant-list">
      {Filtered.map((restaurant) => (
+     <Link key={restaurant.info.id} to={`/restaurant/${restaurant.info.id}`}>
+
   <Restraurantcard
     key={restaurant.info.id}
     resList={restaurant.info}
+ 
   />
+     </Link>
 ))}
-
 
   </div>
   

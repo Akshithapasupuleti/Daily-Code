@@ -119,3 +119,12 @@
   height:350px;
   margin: 8px 0 4px;
 } 
+.error{
+  display: flex;
+   text-decoration: dashed;
+   text-align: center;
+  text-decoration-color: chartreuse;
+
+
+
+}
