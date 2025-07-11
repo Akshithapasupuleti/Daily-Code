@@ -29,11 +29,10 @@ const restaurants =
     )?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     console.log(restaurants);
 
-  setResList(restaurants || []); // fallback to empty array
+  setResList(restaurants || []); 
 
   setFiltered(restaurants || []);
 };
-
 
 if(resList.length===0){
  return <Shimmer/>
@@ -70,14 +69,14 @@ if(resList.length===0){
       
     <div className="restaurant-list">
      {Filtered.map((restaurant) => (
-     <Link key={restaurant.info.id} to={`/restaurant/${restaurant.info.id}`}>
+     
 
   <Restraurantcard
     key={restaurant.info.id}
     resList={restaurant.info}
  
   />
-     </Link>
+   
 ))}
 
   </div>
